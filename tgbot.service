@@ -1,0 +1,14 @@
+q[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=vyva_h
+Group=vyva_h
+
+WorkingDirectory=/home/vyva_h/TeleNinja/ig_ninja/
+Environment="PYTHONPATH=/home/vyva_h/TeleNinja/ig_ninja/"
+ExecStart=/home/vyva_h/TeleNinja/ig_ninja/.venv/bin/python /home/vyva_h/TeleNinja/ig_ninja/NinjaBot.py
+
+[Install]
+WantedBy=multi-user.target
